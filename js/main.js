@@ -17,11 +17,11 @@ function showTable (array) {
             <td>${empl.email}</td>
             <td>${empl.workDay}</td>
             <td>${empl.position}</td>
-            <td>${empl.sumSalary} VNĐ</td>
+            <td>${empl.sumSalary.toLocaleString()} VNĐ</td>
             <td>${empl.typeEmployee}</td>
             <td style='display: flex'>
                 <button onclick='detete("${empl.account}")' class='btn btn-danger mr-2'>Xóa</button>
-                <button onclick='showDetail("${empl.account}")' class='btn btn-info'>Xem</button>
+                <button data-toggle="modal" data-target="#myModal" onclick='showDetail("${empl.account}")' class='btn btn-info'>Xem</button>
             </td>                
         </tr>`
         content += trELE;
